@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\TypeProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +32,16 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+//เมนูผู้ใช้งาน
+Route::get('/admin/user/index', [UserController::class, 'index'])->name('u.index');
+
+
+//เมนูสินค้า
+Route::get('/admin/product/index', [ProductController::class, 'index'])->name('p.index');
+Route::get('/admin/product/create', [ProductController::class, 'create'])->name('p.create');
+
+
+//เมนูประเภทสินค้า
+Route::get('/admin/type/index', [TypeProductController::class, 'index'])->name('t.index');
+Route::get('/admin/type/create', [TypeProductController::class, 'create'])->name('t.create');
