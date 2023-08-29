@@ -76,6 +76,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
@@ -132,6 +133,7 @@
                                 <a class="nav-link" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();this.closest('form').submit();">
                                     <i class="fa fa-power -off"></i>Logout</a>
+                            </form>
                         </div>
                     </div>
 

@@ -12,31 +12,26 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">ลำดับ</th>
-                                <th scope="col">ชื่อสินค้า</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">ชื่อประเภท</th>
+                                <th scope="col">วันที่บันทึกรายการ</th>
+                                <th scope="col">วันที่อัพเดทรายการ</th>
+                                <th scope="col">การจัดการ</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ( $category as $cat )
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <td>{{ $cat->category_id }}</td>
+                                <td>{{ $cat->name }}</td>
+                                <td>{{ $cat->created_at }}</td>
+                                <td>{{ $cat->updated_at }}</td>
+                                <td>
+                                    <a href="{{ url ('admin/type/edit/'.$cat->category_id)}}" class="btn btn-warning">แก้ไข</a>
+                                    <a href="{{ url ('admin/type/delete/'.$cat->category_id)}}" class="btn btn-danger">ลบ</a>
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

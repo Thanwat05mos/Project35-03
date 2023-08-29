@@ -21,24 +21,13 @@
                         </thead>
                         <tbody>
 
-                            @foreach ($products as $product)
-                                <tr>
-                                    <th scope="row">
-                                        {{ $product->id }}
-                                    </th>
-                                    <td>
-                                        {{ $product->name }}
-                                    </td>
-                                    <td>
-                                        {{ $product->price }}
-                                    </td>
-                                    <td>
-                                        {{ $product->detail }}
-                                    </td>
-                                    <td>k</td>
-                                </tr>
-                            @endforeach
-
+                         <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                         </tr>
 
 
                         </tbody>

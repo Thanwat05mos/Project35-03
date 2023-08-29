@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="image" class=" form-control-label">รูปภาพ</label>
+                    <label for="image" class="form-control-label">รูปภาพ</label>
                     <input type="file" id="image" name="image" class="form-control">
                 </div>
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\TypeProductController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +43,12 @@ Route::get('/admin/product/index', [ProductController::class, 'index'])->name('p
 Route::get('/admin/product/create', [ProductController::class, 'create'])->name('p.create');
 
 
+
 //เมนูประเภทสินค้า
-Route::get('/admin/type/index', [TypeProductController::class, 'index'])->name('t.index');
-Route::get('/admin/type/create', [TypeProductController::class, 'create'])->name('t.create');
+Route::get('admin/type/index', [TypeProductController::class, 'index'])->name('t.index');
+Route::get('admin/type/create', [TypeProductController::class, 'create'])->name('t.create');
+Route::post('admin/type/insert', [TypeProductController::class, 'insert']);
+Route::get('admin/type/edit/{id}', [TypeProductController::class, 'edit']);
+Route::post('admin/type/updete/{id}', [TypeProductController::class, 'update']);
+Route::get('admin/type/delete/{id}', [TypeProductController::class, 'delete']);
+
