@@ -39,8 +39,9 @@ Route::get('/admin/user/index', [UserController::class, 'index'])->name('u.index
 
 
 //เมนูสินค้า
-Route::get('/admin/product/index', [ProductController::class, 'index'])->name('p.index');
-Route::get('/admin/product/create', [ProductController::class, 'create'])->name('p.create');
+Route::get('admin/product/index', [ProductController::class, 'index'])->name('p.index');
+Route::get('admin/product/create', [ProductController::class, 'create'])->name('p.create');
+Route::post('admin/product/insert', [ProductController::class, 'insert']);
 
 
 

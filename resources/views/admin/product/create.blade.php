@@ -3,7 +3,8 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header"><strong>เพิ่มสินค้า</strong></div>
-            <form action="" method="post">
+            <form action="{{ url('admin/product/insert') }}" method="post" enctype="multipart/form-data">
+            @csrf
                 <div class="card-body card-block">
                     <div class="form-group">
                         <label for="name" class=" form-control-label">ชื่อสินค้า</label>
@@ -21,7 +22,7 @@
 
                     <div class="form-group">
                         <label class=" form-control-label">ประเภทสินค้า</label>
-                        <select data-placeholder="เลือกประเภทสินค้า" class="standardSelect form-control" tabindex="1">
+                        <select data-placeholder="เลือกประเภทสินค้า" name="category_id" class="standardSelect form-control">
                             <option value="1">ขนม</option>
                             <option value="2">เครื่องดื่ม</option>
                             <option value="3">อาหารสำเร็จรูป</option>
